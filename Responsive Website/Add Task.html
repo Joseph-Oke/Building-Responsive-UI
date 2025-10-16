@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create New Task - Campus Life Planner</title>
+  <link rel="stylesheet" href="Website.css" />
+<link rel="stylesheet" href="Settings.css">
+<link rel="stylesheet" href="Responsive.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
+      <div class="logo">
+        <i class="fas fa-calendar-check icon"></i>
+        <span>Campus Life Planner</span>
+      </div>
+      <nav class="nav-links">
+        <a href="About.html">About</a>
+        <a href="Dashboard.html">Dashboard</a>
+        <a href="Records.html">Records</a>
+        <a href="AddTask.html" class="active">Add Task</a>
+        <a href="Settings.html">Settings</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="back-link">
+    <a href="Records.html"><i class="fas fa-arrow-left"></i> Back to Records</a>
+  </div>
+
+  <section class="task-form-container">
+    <div class="task-form">
+      <h2>Create New Task</h2>
+     <form id="taskForm">
+  <label for="title">Title <span>*</span></label>
+  <input type="text" id="title" placeholder="e.g., Complete Math Assignment" required>
+
+  <label for="duration">Duration (minutes) <span>*</span></label>
+  <input type="number" id="duration" placeholder="e.g., 90" required>
+
+  <label for="date">Due Date <span>*</span></label>
+  <input type="date" id="date" required>
+
+  <label for="tag">Tag <span>*</span></label>
+  <input type="text" id="tag" placeholder="e.g., Study, Meeting, Sports" required>
+
+  <button type="submit" class="save-btn"><i class="fas fa-save"></i> Save Task</button>
+</form>
+
+    </div>
+  </section>
+
+<label>
+  Dark Mode
+  <input type="checkbox" id="darkModeToggle">
+</label>
+
+
+  <footer class="footer">
+    <p>© 2025 Campus Life Planner. Built with care for students.</p>
+  </footer>
+<script src="main.js"></script>
+</body>
+</html>
