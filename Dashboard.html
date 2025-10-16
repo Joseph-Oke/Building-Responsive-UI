@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Campus Life Planner</title>
+
+  <link rel="stylesheet" href="Website.css" />
+<link rel="stylesheet" href="Settings.css">
+<link rel="stylesheet" href="Responsive.css">
+
+  <link rel="stylesheet" href="Dashboard.css" />
+
+  <!-- Google Fonts and Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <header class="header">
+    <div class="container nav">
+      <div class="logo">
+        <i class="fas fa-calendar-check icon"></i>
+        <span>Campus Life Planner</span>
+      </div>
+      <nav class="nav-links">
+        <a href="About.html">About</a>
+        <a href="Dashboard.html" class="active">Dashboard</a>
+        <a href="Records.html">Records</a>
+        <a href="Add Task.html">Add Task</a>
+        <a href="Settings.html">Settings</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Dashboard Content -->
+  <section class="dashboard-container">
+    <h1>Dashboard</h1>
+    <p>Here Is a quick look at your productivity and weekly trends.</p>
+
+    <!-- Overview Cards -->
+    <div class="overview-cards">
+      <div class="overview-card">
+        <div class="overview-card-content">
+          <i class="fas fa-tasks overview-icon"></i>
+          <h3>Total Tasks</h3>
+          <p>24</p>
+        </div>
+      </div>
+
+      <div class="overview-card">
+        <div class="overview-card-content">
+          <i class="fas fa-clock overview-icon"></i>
+          <h3>Hours</h3>
+          <p>36</p>
+        </div>
+      </div>
+
+      <div class="overview-card">
+        <div class="overview-card-content">
+          <i class="fas fa-tags overview-icon"></i>
+          <h3>Common Tag</h3>
+          <p>Study</p>
+        </div>
+      </div>
+
+      <div class="overview-card">
+        <div class="overview-card-content">
+          <i class="fas fa-calendar-week overview-icon"></i>
+          <h3>This Week</h3>
+          <p>12</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Weekly Task Trend Graph -->
+    <div class="graph-section">
+      <h2>Weekly Task Trend</h2>
+      <canvas id="weeklyGraph"></canvas>
+    </div>
+
+<!-- Productivity Overview / Study Cap -->
+<section class="productivity-overview">
+  <h3>Productivity Overview</h3>
+  <p>You have been productive for <strong>36 hours</strong> this week! Keep up the great work.</p>
+</section>
+
+</section>
+
+</section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Joseph Oke</p>
+  </footer>
+
+<label>
+  Dark Mode
+  <input type="checkbox" id="darkModeToggle">
+</label>
+
+
+  <!-- Chart.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Dashboard Script -->
+  <script src="Dashboard.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
