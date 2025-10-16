@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings - Campus Life Planner</title>
+  <link rel="stylesheet" href="Website.css" />
+  <link rel="stylesheet" href="Settings.css" />
+<link rel="stylesheet" href="Responsive.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Existing Nav Bar -->
+  <header class="header">
+    <div class="container nav">
+      <div class="logo">
+        <i class="fas fa-calendar-check icon"></i>
+        <span>Campus Life Planner</span>
+      </div>
+      <nav class="nav-links">
+        <a href="About.html">About</a>
+        <a href="Dashboard.html">Dashboard</a>
+        <a href="Records.html">Records</a>
+        <a href="Add Task.html">Add Task</a>
+        <a href="Settings.html" class="active">Settings</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Settings Page Content -->
+  <div class="settings-container">
+    <h2>Settings</h2>
+    
+    <div class="setting-item">
+      <span>Enable Notifications</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="notifications">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="setting-item">
+      <span>Auto-Save Tasks</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="autoSave">
+        <span class="slider"></span>
+      </label>
+    </div>
+ 
+    <!-- Import / Export Tasks -->
+<div class="setting-item">
+  <span>Export Tasks</span>
+  <button id="exportTasksBtn" class="settings-btn">Export JSON</button>
+</div>
+
+<div class="setting-item">
+  <span>Import Tasks</span>
+  <label class="import-label">
+    Choose JSON
+    <input type="file" id="importTasksInput" accept=".json">
+  </label>
+</div>
+
+    
+    <div class="setting-item">
+  <span>Dark Mode</span>
+  <label class="toggle-switch">
+    <input type="checkbox" id="darkModeToggle">
+    <span class="slider"></span>
+  </label>
+</div>
+
+    <button id="saveBtn">Save Settings</button>
+  </div>
+<script src="main.js"></script>
+  <script src="Settings.js"></script>
+</body>
+</html>

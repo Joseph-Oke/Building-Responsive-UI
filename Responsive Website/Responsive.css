@@ -1,0 +1,241 @@
+/* Responsive design */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Make all media scale correctly */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Make sure containers never overflow */
+.container, section, div {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Keep navbar visible above everything */
+header, .header, .nav, nav {
+  position: relative;
+  z-index: 1000;
+}
+
+/* PreventS any overlapping from images or decorations */
+section, main, .content, .features, .cta, .hero {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero Section Responsive */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 6rem 1rem 3rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 600px;
+}
+
+.top-left-logo-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.top-left-logo {
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Features grid responsive */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.features-grid .card {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.features-grid .card:hover {
+  transform: translateY(-5px);
+}
+
+/* CTA section */
+.cta {
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 992px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .top-left-logo {
+    max-width: 240px;
+  }
+}
+
+@media (max-width: 600px) {
+  header, .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  /* hamburger setup */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .hero {
+    padding: 4rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .top-left-logo {
+    max-width: 200px;
+  }
+
+  .cta h2 {
+    font-size: 1.4rem;
+  }
+
+  .cta p {
+    font-size: 1rem;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .top-left-logo {
+    max-width: 160px;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Mobile Nav Menu */
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #333;
+  transition: 0.3s;
+}
+
+.hamburger:hover {
+  color: #007bff;
+}
+
+/* Mobile only */
+@media (max-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 70px; 
+    right: 0;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 0.7rem;
+    font-size: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+}
+
